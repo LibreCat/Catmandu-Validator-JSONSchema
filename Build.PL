@@ -4,9 +4,9 @@ use Module::Build;
 
 my $requires = {
     perl => '>=5.10.0',
-    Catmandu => '0.8014',  
-    'Try::Tiny' => 0,
-    'JSON::Schema' => '0.015'
+    Catmandu => '0.9103',  
+    Moo => 0,
+    'JSON::Schema' => '0'
 };
 my $recommends = {
 };
@@ -17,6 +17,14 @@ my $build = Module::Build->new(
         nicolas.franck@ugent.be
     )],
     dist_abstract => 'Catmandu Validator for JSON Schema',
+    configure_requires => {
+        'Module::Build' => 0
+    },
+    build_requires => {
+        'Module::Build' => 0,
+        'Test::More' => 0,
+        'Test::Exception' => 0
+    },
     requires => $requires,
     recommends => $recommends,
     create_license => 1,
