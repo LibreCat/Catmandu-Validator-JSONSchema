@@ -87,6 +87,15 @@ Catmandu::Validator::JSONSchema - An implementation of Catmandu::Validator to su
         print Dumper($validator->last_errors());
     }
 
+=head1 NOTE
+
+This module uses JSON::Schema. Therefore the behaviour of
+your schema should apply to draft 03 of the json schema:
+
+http://json-schema.org/draft-03/schema
+
+http://tools.ietf.org/html/draft-zyp-json-schema-03
+
 =head1 SEE ALSO
 
 L<Catmandu::Validator>

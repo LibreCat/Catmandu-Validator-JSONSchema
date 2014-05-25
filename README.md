@@ -1,5 +1,5 @@
 Catmandu-Validator-JSONSchema
-========
+=============================
 
 ##PURPOSE
 
@@ -50,11 +50,28 @@ Nicolas Franck
         print Dumper($validator->last_errors());
     }
 
+##NOTE
+
+This module uses JSON::Schema. Therefore the behaviour of
+your schema should apply to draft 03 of the json schema:
+
+[Draft for JSON Schema v3](http://tools.ietf.org/html/draft-zyp-json-schema-03)
+
+[JSON Schema v3 in json](http://json-schema.org/draft-03/schema)
+
 ##SEE ALSO
 
-Catmandu::Validator
-JSON::Schema
-http://json-schema.org
+[Catmandu::Validator on CPAN](http://search.cpan.org/~nics/Catmandu-0.9103/lib/Catmandu/Validator.pm)
+
+[JSON::Schema on CPAN](http://search.cpan.org/~tobyink/JSON-Schema-0.015/lib/JSON/Schema.pm)
+
+[JSON::Schema on github](https://github.com/tobyink/p5-json-schema)
+
+[JSON Schema website](http://json-schema.org)
+
+[Draft for JSON Schema v3](http://tools.ietf.org/html/draft-zyp-json-schema-03)
+
+[JSON Schema v3 in json](http://json-schema.org/draft-03/schema)
 
 ##LICENSE AND COPYRIGHT
 
