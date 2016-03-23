@@ -1,0 +1,70 @@
+{
+   "abstract" : "An implementation of Catmandu::Validator to support JSON Schema",
+   "author" : [
+      "Nicolas Franck <nicolas.franck@ugent.be>"
+   ],
+   "dynamic_config" : 0,
+   "generated_by" : "Dist::Zilla version 5.035, Dist::Milla version v1.0.8, CPAN::Meta::Converter version 2.150001",
+   "license" : [
+      "perl_5"
+   ],
+   "meta-spec" : {
+      "url" : "http://search.cpan.org/perldoc?CPAN::Meta::Spec",
+      "version" : "2"
+   },
+   "name" : "Catmandu-Validator-JSONSchema",
+   "no_index" : {
+      "directory" : [
+         "t",
+         "xt",
+         "inc",
+         "share",
+         "eg",
+         "examples"
+      ]
+   },
+   "prereqs" : {
+      "configure" : {
+         "requires" : {
+            "Module::Build::Tiny" : "0.034"
+         }
+      },
+      "develop" : {
+         "requires" : {
+            "Dist::Milla" : "v1.0.8",
+            "Test::Pod" : "1.41"
+         }
+      },
+      "runtime" : {
+         "requires" : {
+            "Catmandu" : "0.9103",
+            "JSON::Schema" : "0",
+            "perl" : "v5.10.1"
+         }
+      },
+      "test" : {
+         "requires" : {
+            "Test::Exception" : "0.32",
+            "Test::More" : "0.99"
+         }
+      }
+   },
+   "release_status" : "stable",
+   "resources" : {
+      "bugtracker" : {
+         "web" : "https://github.com/LibreCat/Catmandu-Validator-JSONSchema/issues"
+      },
+      "homepage" : "https://github.com/LibreCat/Catmandu-Validator-JSONSchema",
+      "repository" : {
+         "type" : "git",
+         "url" : "https://github.com/LibreCat/Catmandu-Validator-JSONSchema.git",
+         "web" : "https://github.com/LibreCat/Catmandu-Validator-JSONSchema"
+      }
+   },
+   "version" : "0.1",
+   "x_contributors" : [
+      "Jakob Voß <jakob.voss@gbv.de>",
+      "Nicolas Franck <njfranck@cpan.org>"
+   ]
+}
+
