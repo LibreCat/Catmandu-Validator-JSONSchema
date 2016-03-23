@@ -1,15 +1,14 @@
-Catmandu-Validator-JSONSchema
-=============================
+# NAME
 
-##PURPOSE
+Catmandu::Validator::JSONSchema - An implementation of Catmandu::Validator to support JSON Schema
 
-An implementation of Catmandu::Validator to support JSON Schema
+# STATUS
 
-## AUTHOR
+[![Build Status](https://travis-ci.org/LibreCat/Catmandu-Validator-JSONSchema.svg?branch=master)](https://travis-ci.org/LibreCat/Catmandu-Validator-JSONSchema)
+[![Coverage](https://coveralls.io/repos/LibreCat/Catmandu-Validator-JSONSchema/badge.png?branch=master)](https://coveralls.io/r/LibreCat/Catmandu-Validator-JSONSchema)
+[![CPANTS kwalitee](http://cpants.cpanauthors.org/dist/Catmandu-Validator-JSONSchema.png)](http://cpants.cpanauthors.org/dist/Catmandu-Validator-JSONSchema)
 
-Nicolas Franck
-
-##EXAMPLE
+# SYNOPSIS
 
     use Catmandu::Validator::JSONSchema;
     use Data::Dumper;
@@ -50,34 +49,31 @@ Nicolas Franck
         print Dumper($validator->last_errors());
     }
 
-##NOTE
+# NOTE
 
 This module uses JSON::Schema. Therefore the behaviour of
 your schema should apply to draft 03 of the json schema:
 
-[Draft for JSON Schema v3](http://tools.ietf.org/html/draft-zyp-json-schema-03)
+http://json-schema.org/draft-03/schema
 
-[JSON Schema v3 in json](http://json-schema.org/draft-03/schema)
+http://tools.ietf.org/html/draft-zyp-json-schema-03
 
-##SEE ALSO
+# SEE ALSO
 
-[Catmandu::Validator on CPAN](http://search.cpan.org/~nics/Catmandu-0.9103/lib/Catmandu/Validator.pm)
+[Catmandu::Validator](https://metacpan.org/pod/Catmandu::Validator)
 
-[JSON::Schema on CPAN](http://search.cpan.org/~tobyink/JSON-Schema-0.015/lib/JSON/Schema.pm)
+[JSON::Schema](https://metacpan.org/pod/JSON::Schema)
 
-[JSON::Schema on github](https://github.com/tobyink/p5-json-schema)
+[http://json-schema.org](http://json-schema.org)
 
-[JSON Schema website](http://json-schema.org)
+# AUTHOR
 
-[Draft for JSON Schema v3](http://tools.ietf.org/html/draft-zyp-json-schema-03)
+Nicolas Franck, `<nicolas.franck at ugent.be>`
 
-[JSON Schema v3 in json](http://json-schema.org/draft-03/schema)
-
-##LICENSE AND COPYRIGHT
+# LICENSE AND COPYRIGHT
 
 This program is free software; you can redistribute it and/or modify it
 under the terms of either: the GNU General Public License as published
 by the Free Software Foundation; or the Artistic License.
 
 See http://dev.perl.org/licenses/ for more information.
-

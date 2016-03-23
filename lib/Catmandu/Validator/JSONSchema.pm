@@ -13,14 +13,17 @@ has schema => (
     isa => sub { check_hash_ref($_[0]); },
     required => 1
 );
+
 has _schema => (
     is => 'ro',
     lazy => 1,
     builder => '_build_schema'    
 );
+
 sub _build_schema {
     JSON::Schema->new($_[0]->schema(),format => \%JSON::Schema::FORMATS);
 }
+
 sub validate_data {
     my($self,$hash)=@_;
 
@@ -42,9 +45,22 @@ sub validate_data {
     $errors;
 }
 
+1;
+__END__
+
 =head1 NAME
 
 Catmandu::Validator::JSONSchema - An implementation of Catmandu::Validator to support JSON Schema
+
+=begin markdown
+
+# STATUS
+
+[![Build Status](https://travis-ci.org/LibreCat/Catmandu-Validator-JSONSchema.svg?branch=master)](https://travis-ci.org/LibreCat/Catmandu-Validator-JSONSchema)
+[![Coverage](https://coveralls.io/repos/LibreCat/Catmandu-Validator-JSONSchema/badge.png?branch=master)](https://coveralls.io/r/LibreCat/Catmandu-Validator-JSONSchema)
+[![CPANTS kwalitee](http://cpants.cpanauthors.org/dist/Catmandu-Validator-JSONSchema.png)](http://cpants.cpanauthors.org/dist/Catmandu-Validator-JSONSchema)
+
+=end markdown
 
 =head1 SYNOPSIS
 
@@ -102,7 +118,7 @@ L<Catmandu::Validator>
 
 L<JSON::Schema>
 
-http://json-schema.org
+L<http://json-schema.org>
 
 =head1 AUTHOR
 
@@ -117,5 +133,3 @@ by the Free Software Foundation; or the Artistic License.
 See http://dev.perl.org/licenses/ for more information.
 
 =cut
-
-1;
