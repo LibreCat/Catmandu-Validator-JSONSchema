@@ -57,7 +57,7 @@ Catmandu::Validator::JSONSchema - An implementation of Catmandu::Validator to su
 # STATUS
 
 [![Build Status](https://travis-ci.org/LibreCat/Catmandu-Validator-JSONSchema.svg?branch=master)](https://travis-ci.org/LibreCat/Catmandu-Validator-JSONSchema)
-[![Coverage](https://coveralls.io/repos/LibreCat/Catmandu-Validator-JSONSchema/badge.png?branch=master)](https://coveralls.io/r/LibreCat/Catmandu-Validator-JSONSchema)
+[![Coverage](https://coveralls.io/repos/LibreCat/Catmandu-Validator-JSONSchema/badge.svg?branch=master)](https://coveralls.io/r/LibreCat/Catmandu-Validator-JSONSchema)
 [![CPANTS kwalitee](http://cpants.cpanauthors.org/dist/Catmandu-Validator-JSONSchema.png)](http://cpants.cpanauthors.org/dist/Catmandu-Validator-JSONSchema)
 
 =end markdown
