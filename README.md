@@ -49,24 +49,20 @@ Catmandu::Validator::JSONSchema - An implementation of Catmandu::Validator to su
         print Dumper($validator->last_errors());
     }
 
-# CONFIGURATION
-
-- schema
-
-    JSON Schema given as hash reference, filename, or URL.
-
 # NOTE
 
-This module uses [JSON::Validator](https://metacpan.org/pod/JSON::Validator). Therefore the behaviour of your schema
-should apply to draft 0i4 of the json schema:
+This module uses JSON::Schema. Therefore the behaviour of
+your schema should apply to draft 03 of the json schema:
 
-[http://json-schema.org/draft-04/schema](http://json-schema.org/draft-04/schema)
+http://json-schema.org/draft-03/schema
 
-[http://tools.ietf.org/html/draft-zyp-json-schema-04](http://tools.ietf.org/html/draft-zyp-json-schema-04)
+http://tools.ietf.org/html/draft-zyp-json-schema-03
 
 # SEE ALSO
 
 [Catmandu::Validator](https://metacpan.org/pod/Catmandu::Validator)
+
+[JSON::Schema](https://metacpan.org/pod/JSON::Schema)
 
 [http://json-schema.org](http://json-schema.org)
 

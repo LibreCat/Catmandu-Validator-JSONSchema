@@ -2,7 +2,7 @@ package Catmandu::Validator::JSONSchema;
 use Catmandu::Sane;
 use Moo;
 use Catmandu::Util qw(:is :check);
-use JSON::Validator;
+use JSON::Schema;
 
 our $VERSION = "0.1";
 
@@ -10,34 +10,35 @@ with qw(Catmandu::Validator);
 
 has schema => (
     is => 'ro',
+    isa => sub { check_hash_ref($_[0]); },
     required => 1
 );
 
-has _validator => (
+has _schema => (
     is => 'ro',
     lazy => 1,
-    builder => sub {
-        my $validator = JSON::Validator->new;
-        $validator->schema($_[0]->schema);
-        $validator;
-    }
+    builder => '_build_schema'    
 );
 
+sub _build_schema {
+    JSON::Schema->new($_[0]->schema(),format => \%JSON::Schema::FORMATS);
+}
+
 sub validate_data {
-    my($self, $hash)=@_;
+    my($self,$hash)=@_;
 
     my $errors = undef;
 
-    my @result = $self->_validator->validate($hash);
+    my $result = $self->_schema()->validate($hash);
 
-    if (@result) {
+    unless($result){
         $errors = [
             map { 
                 +{ 
-                    property => $_->{path},
-                    message => $_->{message}
+                    property => $_->property, 
+                    message => $_->message 
                 }; 
-            } @result
+            } $result->errors
         ];   
     }
 
@@ -102,28 +103,20 @@ Catmandu::Validator::JSONSchema - An implementation of Catmandu::Validator to su
         print Dumper($validator->last_errors());
     }
 
-=head1 CONFIGURATION
-
-=over
-
-=item schema
-
-JSON Schema given as hash reference, filename, or URL.
-
-=back
-
 =head1 NOTE
 
-This module uses L<JSON::Validator>. Therefore the behaviour of your schema
-should apply to draft 0i4 of the json schema:
+This module uses JSON::Schema. Therefore the behaviour of
+your schema should apply to draft 03 of the json schema:
 
-L<http://json-schema.org/draft-04/schema>
+http://json-schema.org/draft-03/schema
 
-L<http://tools.ietf.org/html/draft-zyp-json-schema-04>
+http://tools.ietf.org/html/draft-zyp-json-schema-03
 
 =head1 SEE ALSO
 
 L<Catmandu::Validator>
+
+L<JSON::Schema>
 
 L<http://json-schema.org>
 
