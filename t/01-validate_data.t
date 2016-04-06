@@ -9,14 +9,13 @@ use Catmandu::Validator::JSONSchema;
 my $tests = [
     {
         schema => {
+            "required" => ["firstName", "lastName"],
             "properties"=> {
                 "firstName"=> {
                     "type"=> "string",
-                    required => 1
                 },
                 "lastName"=> {
                     "type"=> "string",
-                    required => 1
                 },
                 "age"=> {
                     "description"=> "Age in years",
@@ -27,10 +26,10 @@ my $tests = [
         },
         records => [
             {
-                firstName => "Nicolas",lastName => "Franck"
+                firstName => "Nicolas", lastName => "Franck"
             },
             {
-                firstName => "Nicolas",age => 28
+                firstName => "Nicolas", age => 28
             }
         ],
         valid_count => 1,
@@ -38,14 +37,13 @@ my $tests = [
     },
     {
         schema => {
+            "required" => ["_id", "title"],
             "properties"=> {
                 "_id"=> {
                     "type"=> "string",
-                    required => 1
                 },
                 "title"=> {
                     "type"=> "string",
-                    required => 1
                 },
                 "author"=> {
                     "type"=> "array",
@@ -92,7 +90,6 @@ for my $test(@$tests){
         
     is($validator->valid_count,$test->{valid_count});
     is($validator->invalid_count,$test->{invalid_count});
-
 }
 
 done_testing (scalar(@$tests)*3);
