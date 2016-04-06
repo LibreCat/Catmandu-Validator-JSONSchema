@@ -4,7 +4,7 @@ use Moo;
 use Catmandu::Util qw(:is :check);
 use JSON::Validator;
 
-our $VERSION = "0.1";
+our $VERSION = "0.11";
 
 with qw(Catmandu::Validator);
 
