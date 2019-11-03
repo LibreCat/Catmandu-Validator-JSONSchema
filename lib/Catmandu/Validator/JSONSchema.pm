@@ -32,13 +32,13 @@ sub validate_data {
 
     if (@result) {
         $errors = [
-            map { 
-                +{ 
-                    property => $_->{path},
-                    message => $_->{message}
-                }; 
+            map {
+                +{
+                    property => $_->path(),
+                    message => $_->message()
+                };
             } @result
-        ];   
+        ];
     }
 
     $errors;

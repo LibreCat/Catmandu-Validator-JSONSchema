@@ -1,6 +1,7 @@
 Revision history for Catmandu-Validator-JSONSchema
 
 {{$NEXT}}
+    - use methods path and message of JSON::Validator::Error instead of hash keys directly
 
 0.11  2016-04-06 08:42:47 CEST
     - use JSON::Validator instead of old package JSON::Schema
