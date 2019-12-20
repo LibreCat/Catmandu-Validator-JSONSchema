@@ -35,7 +35,8 @@ sub validate_data {
             map {
                 +{
                     property => $_->path(),
-                    message => $_->message()
+                    message => $_->message(),
+                    details => $_->details()
                 };
             } @result
         ];
