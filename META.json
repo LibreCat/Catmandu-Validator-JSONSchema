@@ -61,7 +61,7 @@
          "web" : "https://github.com/LibreCat/Catmandu-Validator-JSONSchema"
       }
    },
-   "version" : "0.13",
+   "version" : "0.15",
    "x_contributors" : [
       "Jakob Vo\u00df <jakob.voss@gbv.de>",
       "Nicolas Franck <njfranck@cpan.org>"
