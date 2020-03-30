@@ -38,7 +38,7 @@
       "runtime" : {
          "requires" : {
             "Catmandu" : "0.9103",
-            "JSON::Validator" : "3.15",
+            "JSON::Validator" : "3.25",
             "perl" : "v5.10.1"
          }
       },
@@ -66,6 +66,6 @@
       "Jakob Vo\u00df <jakob.voss@gbv.de>",
       "Nicolas Franck <njfranck@cpan.org>"
    ],
-   "x_serialization_backend" : "Cpanel::JSON::XS version 3.0225"
+   "x_serialization_backend" : "Cpanel::JSON::XS version 4.19"
 }
 
